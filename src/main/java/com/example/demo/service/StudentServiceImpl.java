@@ -1,16 +1,17 @@
 package com.example.demo.service;
 
 import com.example.demo.bo.Student;
-
 import java.util.List;
 import java.util.Optional;
 
+
+import org.springframework.stereotype.Service;
+
+@Service
 public class StudentServiceImpl implements StudentService {
 
-    @Override
-    public Optional<Student> save(Student request) {
-        return Optional.empty();
-    }
+	
+    
 
     @Override
     public List<Student> findAll() {
@@ -21,4 +22,6 @@ public class StudentServiceImpl implements StudentService {
     public Optional<Student> findById(int id) {
         return Optional.empty();
     }
+
+	
 }

@@ -1,11 +1,30 @@
 package com.example.demo.bo;
 
-public class Lecturer {
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="Lecturer")
+public class Lecturer {
+    @Id
     private int id;
     private String fullName;
     private int experienceInYears;
 
+   @OneToOne(fetch = FetchType.LAZY, optional = false)
+   @JoinColumn(name = "Id", nullable = false,insertable=false,updatable=false)
+   private Student student;
+    
+    
+    public Lecturer()
+    {
+    	
+    }
+    
     public Lecturer(int id, String fullName, int experienceInYears) {
         this.id = id;
         this.fullName = fullName;

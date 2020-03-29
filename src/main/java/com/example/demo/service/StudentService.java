@@ -20,4 +20,5 @@ public interface StudentService {
 	List<Lecturer> findAlllect();
 
 	List<Student> findAlllect();
+	List<Student> findallbyid();
 }

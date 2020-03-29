@@ -18,4 +18,6 @@ public interface StudentService {
 
 	@Query(value = "SELECT * FROM lecturers u WHERE u.experience_in_years >5", nativeQuery = true)
 	List<Lecturer> findAlllect();
+
+	List<Student> findAlllect();
 }

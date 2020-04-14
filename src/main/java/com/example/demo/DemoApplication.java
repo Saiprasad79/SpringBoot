@@ -21,7 +21,7 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    
+    //demo application
     
     @Bean
     public CommandLineRunner mappingDemo(StudentRepository studRepository,
